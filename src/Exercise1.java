@@ -52,6 +52,7 @@ class Filter extends Observable implements Observer {
         if (o != null && o instanceof Counter){
             list.add((Integer) arg);
             if (list.size()%2==0) {
+                System.out.println("lista size: " + list.size());
                 setChanged();
                 notifyObservers(list);
             }
